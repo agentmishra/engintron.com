@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!--[if IE]><html class="isIE"><![endif]-->
+<!--[if !IE]> --><html><!-- <![endif]-->
+	<head>
+		<meta charset="utf-8" />
+		<title>Nginx on cPanel done right | Engintron by Nuevvo</title>
+		<meta name="viewport" content="width=device-width, user-scalable=0, initial-scale=1.0" />
+		<meta name="description" content="Engintron by Nuevvo - Nginx on cPanel done right - reverse caching proxy mode, automated updates, amazing dashboard to control various day-to-day tasks in cPanel, accelerates Joomla!, WordPress, Drupal & any PHP CMS based site!" />
+		<meta name="keywords" content="engintron, nginx, cpanel, dashboard, web performance, web acceleration, reverse caching proxy" />
+		<meta property="og:url" content="http://engintron.com/" />
+		<meta property="og:title" content="Nginx on cPanel done right | Engintron by Nuevvo" />
+		<meta property="og:type" content="website" />
+		<meta property="og:image" content="http://engintron.com/images/engintron_on_facebook.png" />
+		<meta property="og:description" content="Nginx&reg; is a powerful open source web server that was built to scale websites to millions of visitors. cPanel&reg; is the leading hosting control panel worldwide. Engintron integrates Nginx into cPanel so you can enjoy amazing performance for your sites, without having to sacrifice important hosting features found in cPanel or hiring a sysadmin. Features include: reverse caching proxy (web acceleration) mode, automated updates, amazingly simple dashboard to control Nginx, Apache, MySQL and PHP related day-to-day tasks in cPanel. Accelerates Joomla!, WordPress, Drupal & any PHP CMS based site! Did we mention Engintron is free?" />
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+		<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+		<style type="text/css">
+			html { background: #000000 url(images/artwork.png); -webkit-font-smoothing: antialiased; height: 100%; overflow-y: hidden; background-position: top center; background-repeat: no-repeat; }
+			body { background: url(images/artwork.png) no-repeat 50% 0; font-family: 'Montserrat', sans-serif; font-weight: 400; font-size: 16px; color: #cccccc; font-size 14px; padding: 0; margin: 0; text-align: left; width: 100%; height: 100%; }
+			.clearfix:before,
+			.clearfix:after { content: " "; display: table; /* 2 */ }
+			.clearfix:after { clear: both; }
+			.clearfix { *zoom: 1; }
+			a { color: #fff; font-weight: 400; text-decoration: none; }
+			a:hover { text-decoration: underline; }
+			a:active,
+			a:focus { outline: 0; }
+			p {font-size:14px;}
+			strong { font-weight: 600; }
+			h1 {padding-top:60px;}
+			h1 span { display:none; }
+			#container { width:800px; margin: 0 auto; padding: 0; padding: 120px 0 225px 0; vertical-align: middle; position: absolute; left: 50%; margin-left: -400px; top: 50%; margin-top: -300px; }
+			.col1 { width: 400px; float: left; }
+			.col2 { width: 400px; float: left; }
+			input::-moz-focus-inner { border:0; }
+			#notice { color: #171717; font-weight: 600; margin-top: 7px; line-height: 22px; text-shadow: 0 1px 1px rgba(255,255,255,.3); }
+			#notice a { text-shadow: none; }
+			#form-container { padding: 8px 0 0 0; text-align: center; margin: 0 auto; width: 464px; margin-top: 10px; }
+			#form-container p { font-size: 12px; line-height: 14px; text-align: center; margin: 0 auto; }
+			form { margin: 0 auto; font-family: inherit; }
+			form p { font-size: 22px; margin: 0 auto; color: #fff; margin-bottom: 10px; font-family: inherit; display: block; }
+			form input { color: #898989; font-weight: 400; font-size: 16px; line-height: 16px; border: 0; background-color: #fff; font-family: inherit; display: inline-block; }
+			form input.text { -webkit-border-radius: 25px; border-radius: 25px; padding: 15px 95px 15px 15px; float: left; margin-top: 8px; }
+			form input.text:focus { color: #111; }
+			form input:focus { outline: none; }
+			form input.submit { float: left; background-color: #179541; background-image: -webkit-gradient(linear, left top, left bottom, from(#179541), to(#007f2a)); background-image: -webkit-linear-gradient(top, #179541, #007f2a); background-image: -moz-linear-gradient(top, #179541, #007f2a); background-image: -o-linear-gradient(top, #179541, #007f2a); background-image: linear-gradient(to bottom, #179541, #007f2a); padding: 15px; -webkit-border-radius: 25px; border-radius: 25px; padding: 15px; width: 180px; color: #085722; margin-top: 8px; margin-left: -48px; line-height: 20px; -webkit-transition: all 500ms cubic-bezier(0.000, 0.685, 0.205, 0.995); -moz-transition: all 500ms cubic-bezier(0.000, 0.685, 0.205, 0.995); -ms-transition: all 500ms cubic-bezier(0.000, 0.685, 0.205, 0.995); -o-transition: all 500ms cubic-bezier(0.000, 0.685, 0.205, 0.995); transition: all 500ms cubic-bezier(0.000, 0.685, 0.205, 0.995); }
+			form input.submit:hover { cursor: pointer; color: #fff; }
+			form input.submit:active { padding: 17px 32px 15px; }
+			
+			#dlLink { display:block; margin:0 auto; background-color: #179541; background-image: -webkit-gradient(linear, left top, left bottom, from(#179541), to(#007f2a)); background-image: -webkit-linear-gradient(top, #179541, #007f2a); background-image: -moz-linear-gradient(top, #179541, #007f2a); background-image: -o-linear-gradient(top, #179541, #007f2a); background-image: linear-gradient(to bottom, #179541, #007f2a); -webkit-border-radius: 25px; border-radius: 25px; padding: 15px; width: 180px; line-height: 20px; -webkit-transition: all 500ms cubic-bezier(0.000, 0.685, 0.205, 0.995); -moz-transition: all 500ms cubic-bezier(0.000, 0.685, 0.205, 0.995); -ms-transition: all 500ms cubic-bezier(0.000, 0.685, 0.205, 0.995); -o-transition: all 500ms cubic-bezier(0.000, 0.685, 0.205, 0.995); transition: all 500ms cubic-bezier(0.000, 0.685, 0.205, 0.995); cursor: pointer; color: #fff; }
+			#rateLink { display:block; margin:0 auto; padding:20px 0; text-align:center; font-size: 12px; }
+			
+			footer { font-size: 12px; text-align: center; margin: 0 auto; width: 400px; position: absolute; left: 50%; margin-left: -200px; bottom: 20px; }
+		</style>
+		<!-- Google Analytics -->
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+			ga('create', 'UA-16375363-12', 'engintron.com');
+			ga('send', 'pageview');
+		</script>
+	</head>
+	<body>
+		<div id="container">
+			<div class="col1">
+				<h1>
+					<a href="/">
+						<img src="images/logo.png" alt="Nginx on cPanel done right | Engintron by Nuevvo" />
+						<span>Nginx on cPanel done right | Engintron by Nuevvo</span>
+					</a>
+				</h1>
+			</div>
+			<div class="col2">
+				<p>Nginx&reg; is a powerful open source web server that was built to scale websites to millions of visitors. cPanel&reg; is the leading hosting control panel worldwide.</p>
+				<p>Engintron integrates Nginx into cPanel so you can enjoy amazing performance for your sites, without having to sacrifice important hosting features found in cPanel or hiring a sysadmin.</p>
+				<p>First release features include: Nginx setup in reverse caching proxy (web acceleration) mode for any static or PHP based website, automated Nginx updates, amazingly simple dashboard to control Nginx, Apache, MySQL and PHP related day-to-day tasks in cPanel.</p>
+				<p><i>Did we mention Engintron is free?</i></p>
+			</div>
+			<div class="clearfix"></div>
+			<div id="form-container" class="clearfix">
+				<p>The wait is over!</p>
+				<div class="clearfix">&nbsp;</div>
+				<a id="dlLink" href="https://github.com/nuevvo/engintron">Get Engintron here</a>
+				<a id="rateLink" href="http://applications.cpanel.net/appcat/engintron-nginx-on-cpanel">Rate Engintron in the cPanel Application Catalog</a>
+				<!--
+				<form action="http://tinyletter.com/nuevvo" method="post" target="popupwindow" onsubmit="window.open('http://tinyletter.com/nuevvo', 'popupwindow', 'scrollbars=yes,width=680,height=680');return true;">
+					<p>Enter your e-mail address below if you want to be notified<br />when Engintron officially launches!</p>
+					<div class="clearfix">&nbsp;</div>
+					<input type="text" class="text" name="email" id="tlemail" value="your e-mail address" onblur="if(this.value=='') this.value='your e-mail address';" onfocus="if(this.value=='your e-mail address') this.value='';" />
+					<input type="hidden" value="1" name="embed" />
+					<input type="submit" value="Notify me!" class="submit" />
+				</form>
+				-->
+			</div>
+		</div>
+		<footer>Copyright &copy; 2010-2014 <a target="_blank" href="http://nuevvo.com">Nuevvo Webware P.C.</a> All rights reserved.</footer>
+	</body>
+</html>
