@@ -25,5 +25,5 @@ div#ngContainer {margin:0;padding:0 16px 4px;position:relative;}
 		body.op_editphpini div#ngOutputWindow,
 		body.op_mysqleditcnf div#ngOutputWindow {background:#eee;}
 		div.message {background:#fffff0;font-weight:bold;color:#009;text-align:right;padding:8px;border:1px solid #ccc;position:absolute;top:4px;right:4px;width:240px;opacity:0.9;}
-		div#ngOutput form textarea {border:none;width:100%;padding:0;margin:0;}
+		div#ngOutput form textarea {border:none;width:100%;padding:0;margin:0;font-family:monospace;}
 		div#ngOutput form .editbox {border-top:1px solid #ccc;padding:8px;}
