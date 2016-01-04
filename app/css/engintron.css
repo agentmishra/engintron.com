@@ -18,7 +18,7 @@ div#ngContainer {margin:0;padding:0 16px 4px;position:relative;}
 	div#ngOperations ul li {padding:1px 0;}
 	div#ngOperations ul li.active {font-weight:bold;}
 	div#ngOutput {float:right;width:68%;}
-		div#ngOutputWindow {padding:2px;height:380px;overflow:auto;border:1px solid #ccc;font-family:monospace;}
+		div#ngOutputWindow {padding:2px;max-height:380px;overflow:auto;border:1px solid #ccc;font-family:monospace;}
 		div#ngOutputWindow b {color:#009;}
 		div#ngOutputWindow b.green {color:#0c0;}
 		body.op_edit div#ngOutputWindow,
