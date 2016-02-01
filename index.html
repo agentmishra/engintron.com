@@ -5,13 +5,13 @@
 		<meta charset="utf-8" />
 		<title>Nginx on cPanel done right | Engintron by Nuevvo</title>
 		<meta name="viewport" content="width=device-width, user-scalable=0, initial-scale=1.0" />
-		<meta name="description" content="Engintron by Nuevvo - Nginx on cPanel done right - reverse caching proxy mode, automated updates, amazing dashboard to control various day-to-day tasks in cPanel, accelerates Joomla!, WordPress, Drupal & any PHP CMS based site!" />
+		<meta name="description" content="Engintron by Nuevvo - Nginx on cPanel done right - reverse caching proxy mode, automated updates, amazing dashboard to control various day-to-day tasks in cPanel, accelerates Joomla, WordPress, Drupal & any PHP based site!" />
 		<meta name="keywords" content="engintron, nginx, cpanel, dashboard, web performance, web acceleration, reverse caching proxy" />
 		<meta property="og:url" content="https://engintron.com/" />
 		<meta property="og:title" content="Nginx on cPanel done right | Engintron by Nuevvo" />
 		<meta property="og:type" content="website" />
 		<meta property="og:image" content="https://engintron.com/images/engintron_on_facebook.png" />
-		<meta property="og:description" content="Nginx&reg; is a powerful open source web server that was built to scale websites to millions of visitors. cPanel&reg; is the leading hosting control panel worldwide. Engintron integrates Nginx into cPanel so you can enjoy amazing performance for your sites, without having to sacrifice important hosting features found in cPanel or hiring a sysadmin. Features include: reverse caching proxy (web acceleration) mode, automated updates, amazingly simple dashboard to control Nginx, Apache, MySQL and PHP related day-to-day tasks in cPanel. Accelerates Joomla!, WordPress, Drupal & any PHP CMS based site! Did we mention Engintron is free?" />
+		<meta property="og:description" content="Nginx&reg; is a powerful open source web server that was built to scale websites to millions of visitors. cPanel&reg; is the leading hosting control panel worldwide. Engintron integrates Nginx into cPanel so you can enjoy amazing performance for your sites, without having to sacrifice important hosting features found in cPanel. Installation is easy and features include (among others): Nginx setup in reverse caching proxy mode for all static assets &amp; optionally for dynamic content using a 1 second micro-cache, automated updates for Nginx using official repos, amazingly simple app dashboard in cPanel to control Nginx, Apache, MySQL and PHP configuration files and tasks &amp; a few handy utilities for day-to-day sysadmin tasks. Did we mention Engintron is free?" />
 		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 		<link href="//fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
 		<style type="text/css">
@@ -36,7 +36,7 @@
 			#notice { color: #171717; font-weight: 600; margin-top: 7px; line-height: 22px; text-shadow: 0 1px 1px rgba(255,255,255,.3); }
 			#notice a { text-shadow: none; }
 			#form-container { padding: 8px 0 0 0; text-align: center; margin: 0 auto; width: 464px; margin-top: 10px; }
-			#form-container p { font-size: 12px; line-height: 14px; text-align: center; margin: 0 auto; }
+			#form-container p { font-size: 12px; line-height: 14px; text-align: center; margin: 8px auto 0; }
 			form { margin: 0 auto; font-family: inherit; }
 			form p { font-size: 22px; margin: 0 auto; color: #fff; margin-bottom: 10px; font-family: inherit; display: block; }
 			form input { color: #898989; font-weight: 400; font-size: 16px; line-height: 16px; border: 0; background-color: #fff; font-family: inherit; display: inline-block; }
@@ -47,7 +47,7 @@
 			form input.submit:hover { cursor: pointer; color: #fff; }
 			form input.submit:active { padding: 17px 32px 15px; }
 			#dlLink { display:block; margin:0 auto; background-color: #179541; background-image: -webkit-gradient(linear, left top, left bottom, from(#179541), to(#007f2a)); background-image: -webkit-linear-gradient(top, #179541, #007f2a); background-image: -moz-linear-gradient(top, #179541, #007f2a); background-image: -o-linear-gradient(top, #179541, #007f2a); background-image: linear-gradient(to bottom, #179541, #007f2a); -webkit-border-radius: 25px; border-radius: 25px; padding: 15px; width: 180px; line-height: 20px; -webkit-transition: all 500ms cubic-bezier(0.000, 0.685, 0.205, 0.995); -moz-transition: all 500ms cubic-bezier(0.000, 0.685, 0.205, 0.995); -ms-transition: all 500ms cubic-bezier(0.000, 0.685, 0.205, 0.995); -o-transition: all 500ms cubic-bezier(0.000, 0.685, 0.205, 0.995); transition: all 500ms cubic-bezier(0.000, 0.685, 0.205, 0.995); cursor: pointer; color: #fff; }
-			#rateLink { display:block; margin:0 auto; padding:20px 0; text-align:center; font-size: 12px; }
+			#rateLink { display:block; margin:0 auto; padding:12px 0; text-align:center; font-size: 12px; }
 			footer { font-size: 12px; text-align: center; margin: 0 auto; width: 400px; position: absolute; left: 50%; margin-left: -200px; bottom: 20px; }
 		</style>
 
@@ -73,18 +73,21 @@
 			</div>
 			<div class="col2">
 				<p>Nginx&reg; is a powerful open source web server that was built to scale websites to millions of visitors. cPanel&reg; is the leading hosting control panel worldwide.</p>
-				<p>Engintron integrates Nginx into cPanel so you can enjoy amazing performance for your sites, without having to sacrifice important hosting features found in cPanel or hiring a sysadmin.</p>
-				<p>First release features include: Nginx setup in reverse caching proxy (web acceleration) mode for any static or PHP based website, automated Nginx updates, amazingly simple dashboard to control Nginx, Apache, MySQL and PHP related day-to-day tasks in cPanel.</p>
+				<p>Engintron integrates Nginx into cPanel so you can enjoy amazing performance for your sites, without having to sacrifice important hosting features found in cPanel.</p>
+				<p>Installation is easy and features include (among others): Nginx setup in reverse caching proxy mode for all static assets &amp; optionally for dynamic content using a 1 second micro-cache, automated updates for Nginx using official repos, amazingly simple app dashboard in cPanel to control Nginx, Apache, MySQL and PHP configuration files and tasks &amp; a few handy utilities for day-to-day sysadmin tasks.</p>
 				<p><i>Did we mention Engintron is free?</i></p>
 			</div>
 			<div class="clearfix"></div>
 			<div id="form-container" class="clearfix">
-				<p>(Engintron is temporarily hosted on GitHub)</p>
-				<div class="clearfix">&nbsp;</div>
-				<a id="dlLink" href="https://github.com/nuevvo/engintron">Get Engintron here</a>
+				<a id="dlLink" href="https://github.com/nuevvo/engintron">Get Engintron v1.5 here</a>
+				<p>(new version 1.5 released Feb 2016)</p>
 				<a id="rateLink" href="https://applications.cpanel.com/listings/view/Engintron-Nginx-on-cPanel">Rate Engintron in the cPanel Application Catalog</a>
 			</div>
 		</div>
-		<footer>Copyright &copy; 2010-<script type="text/javascript">document.write(new Date().getFullYear())</script> <a target="_blank" href="http://nuevvo.com/">Nuevvo Webware P.C.</a> All rights reserved.<br /><br />Development &amp; testing cPanel server sponsored by <a target="_blank" href="https://www.eurovps.com/?ref=engintron">EuroVPS</a>.</footer>
+		<footer>
+			Copyright &copy; 2010-<script type="text/javascript">document.write(new Date().getFullYear())</script> <a target="_blank" href="http://nuevvo.com/">Nuevvo Webware P.C.</a> All rights reserved.
+			<br /><br />
+			Development &amp; testing cPanel server sponsored by <a target="_blank" href="https://www.eurovps.com/?ref=engintron">EuroVPS</a>.
+		</footer>
 	</body>
 </html>
