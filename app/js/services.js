@@ -56,5 +56,7 @@ if(versionCompare(CURRENT_VERSION, ENGINTRON_VERSION)){
 		notice.innerHTML += 'update Engintron from the command-line as root user.';
 	}
 	notice.innerHTML += '<br /><br />For more info check the <a target="_blank" href="https://github.com/engintron/engintron#changelog">Engintron release changelog</a>.</div>';
-	b.appendChild(notice);
+	window.onload = function(){
+		b.appendChild(notice);
+	}
 }
