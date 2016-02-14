@@ -51,11 +51,11 @@ if(versionCompare(CURRENT_VERSION, ENGINTRON_VERSION)){
 	notice.setAttribute('style', 'font-size:14px;text-align:center;padding:10px;background:#00b243;color:#fff;opacity:0.9;position:absolute;top:0;left:0;right:0;border:2px solid #008d23;');
 	notice.innerHTML = '<div style="">A newer version of Engintron (v'+CURRENT_VERSION+') is now available.<br /><br />Make sure you backup any custom settings and ';
 	if(versionCompare(ENGINTRON_VERSION, '1.5.2')){
-		notice.innerHTML += '<a href="engintron.php?op=engintron_update">click here to update to the latest version</a>.';
+		notice.innerHTML += '<a style="color:#fff;font-weight:bold;" href="engintron.php?op=engintron_update">click here to update to the latest version</a>.';
 	} else {
 		notice.innerHTML += 'update Engintron from the command-line as root user.';
 	}
-	notice.innerHTML += '<br /><br />For more info check the <a target="_blank" href="https://github.com/engintron/engintron#changelog">Engintron release changelog</a>.</div>';
+	notice.innerHTML += '<br /><br />For more info check the <a style="color:#fff;font-weight:bold;" target="_blank" href="https://github.com/engintron/engintron#changelog">Engintron release changelog</a>.</div>';
 	window.onload = function(){
 		b.appendChild(notice);
 	}
