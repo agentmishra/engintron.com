@@ -48,7 +48,7 @@ var CURRENT_VERSION = '1.6.0';
 window.onload = function(){
 	if(versionCompare(CURRENT_VERSION, ENGINTRON_VERSION)){
 		var b = document.getElementsByTagName('body')[0];
-		if(versionCompare(ENGINTRON_VERSION, '1.5.2')){
+		if(versionCompare(ENGINTRON_VERSION, '1.5.1')){
 			var noticeAction = '<a style="color:#fff;font-weight:bold;" href="engintron.php?op=engintron_update">click here to update to the latest version</a>';
 		} else {
 			var noticeAction = 'update Engintron from the command-line as root user';
