@@ -45,7 +45,7 @@ versionCompare = function(left, right) {
 
 /* === Engintron for cPanel/WHM === */
 
-var CURRENT_VERSION = '1.6.0';
+var CURRENT_VERSION = '1.6.1';
 
 window.onload = function(){
 	if(versionCompare(CURRENT_VERSION, ENGINTRON_VERSION)){
