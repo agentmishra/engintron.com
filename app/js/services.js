@@ -1,4 +1,4 @@
-/* Engintron App - services.js */
+/* === Engintron for cPanel/WHM === */
 
 (function(){
 
@@ -31,7 +31,8 @@
 	    if (typeof left + typeof right != 'stringstring') return false;
 	    var a = left.split('.'),
 	    	b = right.split('.'),
-	    	i = 0, len = Math.max(a.length, b.length);
+	    	i = 0,
+	    	len = Math.max(a.length, b.length);
 	    for (; i < len; i++) {
 	        if ((a[i] && !b[i] && parseInt(a[i]) > 0) || (parseInt(a[i]) > parseInt(b[i]))) {
 	            return 1;
@@ -42,7 +43,7 @@
 	    return 0;
 	}
 
-	/* === Engintron for cPanel/WHM === */
+	/* === Engintron App === */
 	var CURRENT_VERSION = '1.6.1';
 	var b = document.getElementsByTagName('body')[0];
 
@@ -52,8 +53,10 @@
 		} else {
 			var noticeAction = 'update Engintron from the command-line as root user';
 		}
-		var notice = '<div style="font-size:12px;text-align:center;padding:10px;background:#00b243;color:#fff;opacity:0.9;position:absolute;top:0;left:0;right:0;border-bottom:2px solid #008d23;"><div style="width:92%;margin:auto;padding:0;">A newer version of Engintron (v'+CURRENT_VERSION+') is now available. Make sure you backup any custom rules in Nginx and '+noticeAction+'.<br />For more info check the <a style="color:#fff;font-weight:bold;" target="_blank" href="https://github.com/engintron/engintron#changelog">Engintron release changelog</a>.</div></div>';
-		b.innerHTML += notice;
+		var notice = '<div style="font-size:12px;text-align:center;padding:10px;background:#00b243;color:#fff;opacity:0.9;position:absolute;top:0;left:0;right:0;border-bottom:2px solid #008d23;z-index:999999;"><div style="width:92%;margin:auto;padding:0;">A newer version of Engintron (v'+CURRENT_VERSION+') is now available. Make sure you backup any custom rules in Nginx and '+noticeAction+'.<br />For more info check the <a style="color:#fff;font-weight:bold;" target="_blank" href="https://github.com/engintron/engintron#changelog">Engintron release changelog</a>.</div></div>';
+		var mountNotice = document.createElement('div');
+		mountNotice.innerHTML = notice;
+		b.appendChild(mountNotice);
 	}
 
 })();
